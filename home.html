@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily QR Code</title>
+  <style>
+    
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 1rem;
+      box-sizing: border-box;
+      background: #f8f8f8;
+    }
+    button {
+      background-color: #007BFF;      /* nice medium-blue */
+      color: white;                   /* white text for contrast */
+      border: none;                   /* remove default border */
+      padding: 1em 2em;           /* vertical + horizontal padding */
+      font-size: 2rem;                /* reasonable text size */
+      border-radius: 0.5em;           /* rounded corners */
+      cursor: pointer;                /* pointer on hover */
+      transition: background-color 0.2s ease;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+    }
+
+    button:hover {
+      background-color: #0056b3;      /* darker blue on hover */
+    }
+
+    button:active {
+      background-color: #00408d;      /* even darker when clicking */
+    }
+
+    button:focus {
+      outline: 2px solid #80bdff;     /* focus ring */
+      outline-offset: 2px;
+    }
+
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to ICM!</h1>
+    <h2>What do you do here?</h2>
+    <span id="datetime"></span>
+    <button id="teachers" href="teachers.html">Summer Teacher</button>
+    <button id="perm" href="perm.html">ICM Employee</button>
+    <button id="interns" href="index.html">Summer Intern</button>
+
+
+
+    <script src="homescript.js"></script>
+</body>
+
+
+
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily QR Code</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 1rem;
+      box-sizing: border-box;
+      background: #f8f8f8;
+    }
+    #datetime {
+      margin-bottom: 1rem;
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      color: #333;
+      text-align: center;
+    }
+    #loading {
+      margin-bottom: 0.5rem;
+      color: #666;
+    }
+    #qrcode {
+      width: min(90vw, 400px);
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      display: none;
+    }
+
+    button {
+      background-color: #007BFF;      /* nice medium-blue */
+      color: white;                   /* white text for contrast */
+      border: none;                   /* remove default border */
+      padding: 1em 2em;           /* vertical + horizontal padding */
+      font-size: 1.5rem;                /* reasonable text size */
+      border-radius: 0.5em;           /* rounded corners */
+      cursor: pointer;                /* pointer on hover */
+      transition: background-color 0.2s ease;
+      margin-bottom: 1rem;
+    }
+
+    button:hover {
+      background-color: #0056b3;      /* darker blue on hover */
+    }
+
+    button:active {
+      background-color: #00408d;      /* even darker when clicking */
+    }
+
+    button:focus {
+      outline: 2px solid #80bdff;     /* focus ring */
+      outline-offset: 2px;
+    }
+
+    a{
+      text-decoration: none;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Welcome to the ICM <u><strong>Permanent Employees</strong></u> Sign-in </h1>
+  <button id="teachers" href="teachers.html">Summer Teachers</button>
+  <button id="interns" href="index.html">Summer Interns</button>
+  <div id="datetime">Loading date/time…</div>
+  <div id="loading">Loading QR code…</div>
+  <img id="qrcode" alt="Today's QR Code" />
+
+  <!-- load your script here, after the elements exist -->
+  <script src="permscript.js"></script>
+</body>
+</html>
