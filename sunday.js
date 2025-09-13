@@ -1,17 +1,8 @@
-// internscript.js
+// sunday.js
 ;(function() {
   const datetimeEl = document.getElementById('datetime');
   const loadingEl  = document.getElementById('loading');
   const qrEl = document.getElementById('qrcode');
-
-  document.getElementById('perm').addEventListener('click', function(){
-    window.location.href = 'perm.html'
-  });
-
-  document.getElementById('teachers').addEventListener('click', function(){
-    window.location.href = 'teachers.html'
-  });
-  
 
   // File base names for each day (0=Sunday…6=Saturday)
   const dayFiles = [
@@ -51,14 +42,14 @@
     });
     datetimeEl.textContent = `${dateStr} — ${timeStr}`;
 
-    // Show loader while we swap images
+    // Show loader while swaping images
     loadingEl.style.display = 'block';
     qrEl.style.display = 'none';
 
-    // Build the path
+    // Build the path - If you wnat to add a new section then change the pathss
     const dow = now.getDay(); // 0–6
     const fileName = `${dayFiles[dow]}.png`; // e.g. "Saturday.png"
-    const fullPath = `qr-codes/interns/${fileName}`;
+    const fullPath = `qr-codes/sunday/${fileName}`;
 
     console.log('Setting QR src →', fullPath);
     qrEl.src = fullPath;

@@ -1,4 +1,4 @@
-// script.js
+// permscript.js
 ;(function() {
   const datetimeEl = document.getElementById('datetime');
   const loadingEl  = document.getElementById('loading');
@@ -74,5 +74,5 @@ function redirectHome() {
   window.location.href = 'home.html';
 }
 
-// set a 10-second timer, then fire redirectHome
-setTimeout(redirectHome, 10000);
+// set a 15-second timer, then fire redirectHome
+setTimeout(redirectHome, 15000);

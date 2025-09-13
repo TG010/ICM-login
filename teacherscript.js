@@ -1,4 +1,4 @@
-// script.js
+// teachersscript.js
 ;(function() {
 
   // 'El' means element

@@ -1,3 +1,5 @@
+//homescript.js
+
 const datetimeEl = document.querySelector('#datetime');
 
 
@@ -9,9 +11,13 @@ document.getElementById('teachers').addEventListener('click', function(){
   window.location.href = 'teachers.html'
 });
 
-  document.getElementById('interns').addEventListener('click', function(){
-    window.location.href = 'index.html'
+document.getElementById('interns').addEventListener('click', function(){
+  window.location.href = 'index.html'
   });
+
+document.getElementById('sunday').addEventListener('click', function(){
+  window.location.href = 'sunday.html'
+});
 
 
 function updateDateTime() {
